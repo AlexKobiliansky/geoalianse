@@ -1,0 +1,57 @@
+.s-faq
+  background-color: #fbfbfb
+  padding: 75px 0 55px
+  .section-title
+    padding-bottom: 12px
+
+.ishome
+  .faq-wrap
+    overflow: hidden
+
+.faq-wrap
+  background-color: #fff
+  box-shadow: 0 0 40px rgba(#000, .2)
+  padding: 40px 30px
+  counter-reset: faq-item
+  position: relative
+  &:after
+    content: '?'
+    position: absolute
+    font-size: 713px
+    font-weight: 700
+    color: #000
+    opacity: .05
+    right: -50px
+    top: 0
+    line-height: 500px
+
+.faq-item
+  margin-bottom: 45px
+  position: relative
+  z-index: 2
+  &:last-child
+    margin-bottom: 0
+  &-quest
+    position: relative
+    padding-left: 55px
+    cursor: pointer
+    &:before
+      counter-increment: faq-item
+      content: counter(faq-item)
+      position: absolute
+      color: #fff
+      width: 41px
+      height: 41px
+      +gradient
+      font-size: 24px
+      font-weight: 700
+      line-height: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      left: 0
+      top: -9px
+  &-ans
+    display: none
+    padding: 20px 55px 0
+    font-size: 16px

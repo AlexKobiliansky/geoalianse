@@ -169,6 +169,20 @@ $(document).ready(function(){
      * end YOUTUBE SCRIPT
      */
 
+    /** FAQ custom */
+    $('.faq-item-quest').on("click", function(){
+        var parent = $(this).parents('.faq-item');
+
+
+        parent.toggleClass('active').find('.faq-item-ans').slideToggle();
+
+        parent.siblings('.faq-item').each(function(){
+            $(this).removeClass('active');
+            $(this).find('.faq-item-ans').slideUp();
+        });
+    });
+    /** end FAQ custom */
+
 
     /** FORMS START */
     $('.agreement').styler();
