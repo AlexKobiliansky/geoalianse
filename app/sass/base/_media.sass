@@ -6,6 +6,16 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .advantages-wrap
+    flex-wrap: wrap
+
+  .adv-item
+    width: 33.33333%
+    &:nth-child(4)
+      border-left: 1px solid #e5e5e5
+    &:nth-child(1), &:nth-child(2), &:nth-child(3)
+      border-bottom: 1px solid #e5e5e5
+
   .addserv-item
     padding-right: 30px
     &-title
@@ -112,6 +122,15 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .adv-item
+    width: 50%
+    border-bottom: 1px solid #e5e5e5
+    &:nth-child(4)
+      border-left: none
+    &:nth-child(odd)
+      border-left: 1px solid #e5e5e5
+
+
   .section-title
     font-size: 36px
     &:before
@@ -121,6 +140,10 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .adv-item
+    width: 100%
+    border-left: 1px solid #e5e5e5!important
 
   .addservs-wrap
     flex-wrap: wrap
@@ -133,6 +156,7 @@
 
   .s-services
     top: -140px
+    margin-bottom: -140px
 
   .service-item
     width: 100%

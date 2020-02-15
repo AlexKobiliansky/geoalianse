@@ -172,3 +172,42 @@
   color: #284200
   padding-bottom: 17px
 
+.advantages
+  background-color: #fff
+  box-shadow: 0 0 40px rgba(#000, .1)
+  position: relative
+  z-index: 1
+
+.advantages-wrap
+  display: flex
+  counter-reset: adv-item
+
+
+
+.adv-item
+  width: 20%
+  padding: 32px 12px 25px
+  position: relative
+  border-right: 1px solid #e5e5e5
+  &:first-child
+    border-left: 1px solid #e5e5e5
+  &:before
+    counter-increment: adv-item
+    content: "0"counter(adv-item)
+    position: absolute
+    color: #dcdcdc
+    font-weight: 900
+    line-height: 1
+    right: 24px
+    top: 30px
+  .svg
+    height: 65px
+    width: auto
+    fill: $accent-green
+  &-icon
+    margin-bottom: 15px
+  &-title
+    font-size: 24px
+    font-weight: 700
+    margin-bottom: 15px
+
