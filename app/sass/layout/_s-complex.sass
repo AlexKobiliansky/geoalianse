@@ -1,0 +1,89 @@
+.s-complex
+  background-color: #fbfbfb
+  padding-top: 80px
+  padding-bottom: 65px
+  background-image: url('../img/bg-complex.jpg')
+  +bg-cover
+  position: relative
+  top: -30px
+  margin-bottom: -30px
+
+
+.complex-wrap
+  position: relative
+  display: flex
+  width: 100%
+  max-width: 790px
+  margin-left: auto
+  margin-right: auto
+
+
+  .section-title
+    position: absolute
+    transform: rotate(90deg)
+    left: -227px
+    top: 150px
+    &:before
+      top: auto
+      bottom: 4px
+    &:after
+      bottom: 12px
+      height: calc(100% - 7px)
+
+.complex-item
+  width: 50%
+  box-shadow: 0 0 40px rgba(#000, .2)
+  &-title
+    +gradient
+    text-transform: uppercase
+    padding: 26px 80px 26px 26px
+    line-height: 1
+    color: #fff
+    font-size: 24px
+    font-weight: 700
+    position: relative
+    .svg
+      height: 30px
+      width: auto
+      fill: #fff
+      position: absolute
+      right: 32px
+      top: calc(50% - 15px)
+  &-desc
+    padding: 45px 28px 15px 28px
+    background-color: #fff
+    li
+      position: relative
+      padding-left: 25px
+      margin-bottom: 20px
+      &:before
+        content: ''
+        position: absolute
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        +gradient
+        left: 0
+        top: 9px
+  &-bottom
+    border-top: 1px solid #ccc
+    background-color: #fff
+    line-height: 1
+    padding: 22px 25px
+    text-align: right
+    font-size: 40px
+    font-weight: 700
+    position: relative
+    a
+      position: absolute
+      height: 100%
+      width: 85px
+      left: 0
+      top: 0
+      background-color: $accent-red
+      background-image: url('../img/icons/next-arrow.png')
+      background-size: 17px 31px
+      background-position: center center
+      background-repeat: no-repeat
+      &:hover
+        background-color: darken($accent-red, 5%)

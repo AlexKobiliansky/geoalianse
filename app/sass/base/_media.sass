@@ -6,6 +6,27 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .complex-wrap
+    flex-wrap: wrap
+    .section-title
+      position: relative
+      transform: none
+      left: 0
+      top: 0
+      width: 100%
+      padding-bottom: 17px
+      &:before
+        top: 10px
+      &:after
+        bottom: 0
+        height: calc(100% - 18px)
+
+  .s-form
+    background-color: #fbfbfb
+
+  .body-form
+    padding-right: 40px
+
   .advantages-wrap
     flex-wrap: wrap
 
@@ -122,6 +143,35 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .body-form
+    padding-bottom: 100px
+    padding-top: 50px
+
+  .s-form
+    form
+      left: 0
+      width: 100%
+
+  .complex-wrap
+    .section-title
+      margin-left: 50px
+      &:before
+        top: 6px
+      &:after
+        height: calc(100% - 14px)
+
+  .s-complex
+    padding-top: 50px
+    background-image: none
+    padding-bottom: 20px
+
+  .complex-item
+    width: 100%
+    margin-bottom: 30px
+    max-width: 400px
+    margin-left: auto
+    margin-right: auto
+
   .adv-item
     width: 50%
     border-bottom: 1px solid #e5e5e5
@@ -141,9 +191,40 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-complex
+    padding-top: 0
+    top: 0
+
+  .complex-item
+    &-title
+      padding: 20px 60px 20px 20px
+      font-size: 22px
+      .svg
+        height: 24px
+        top: calc(50% - 12px)
+    &-bottom
+      font-size: 28px
+      padding: 16px 25px
+      a
+        height: 60px
+        width: 60px
+        background-size: 10px
+
+  .complex-wrap
+    .section-title
+      margin-left: 0
+
+  .body-form
+    padding-bottom: 60px
+
+  .s-form
+    background-image: none
+
   .adv-item
     width: 100%
     border-left: 1px solid #e5e5e5!important
+    &:last-child
+      border-bottom: none
 
   .addservs-wrap
     flex-wrap: wrap
