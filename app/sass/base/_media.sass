@@ -5,6 +5,40 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .addserv-item
+    padding-right: 30px
+    &-title
+      font-size: 22px
+    &-desc
+      font-size: 16px
+      margin-bottom: 10px
+
+  .service-item
+    width: 33.333%
+    .service-item-content
+      &:before, &:after
+        display: none
+    &:nth-child(3n)
+      .service-item-content
+        border-right: none
+        &:before, &:after
+          display: none
+    &:nth-child(4n)
+      .service-item-content
+        border-right: 1px solid #e5e5e5
+    &:last-child
+      .service-item-content
+        border-right: none!important
+
+
+
+  .intro-slide
+    h1
+      font-size: 70px
+      span
+        font-size: 80px
+
   .top-logo
     img
       max-width: 280px
@@ -16,6 +50,42 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .services-wrap
+    margin-bottom: 70px
+
+  .addservs-wrap
+    margin-bottom: 70px
+
+  .addserv-item
+    padding: 25px 15px
+    &-title
+      font-size: 20px
+    &-price
+      font-size: 20px
+
+  .top-line:before
+    opacity: .6
+
+  .service-item
+    width: 50%
+    &:nth-child(odd)
+      .service-item-content
+        border-right: 1px solid #e5e5e5
+    &:nth-child(even)
+      .service-item-content
+        border-right: none
+
+
+  .s-intro
+    padding-bottom: 300px
+
+  .intro-slide
+    height: 360px
+    h1
+      font-size: 50px
+      span
+        font-size: 60px
 
   .top-line
     .container
@@ -42,9 +112,47 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .section-title
+    font-size: 36px
+    &:before
+      top: 6px
+    &:after
+      height: calc(100% - 14px)
+
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .addservs-wrap
+    flex-wrap: wrap
+
+  .addserv-item
+    width: 100%
+    border-right: 0
+    border-bottom: 1px solid rgba(#000, .3)
+    padding: 40px 30px
+
+  .s-services
+    top: -140px
+
+  .service-item
+    width: 100%
+    &:nth-child(odd)
+      .service-item-content
+        border-right: none
+
+  .section-title
+    font-size: 32px
+    &:before
+      top: 7px
+    &:after
+      height: calc(100% - 15px)
+
+  .intro-slide
+    height: 280px
+    h1
+      font-size: 28px
+      span
+        font-size: 36px
 
 
   .top-item
@@ -66,6 +174,13 @@
   .top-logo
     img
       width: 100%
+
+@media(max-width: 390px)
+  .section-title
+    padding-left: 0
+    font-size: 28px
+    &:before, &:after
+      display: none
 
 
 /*==========  Mobile First  ==========*/

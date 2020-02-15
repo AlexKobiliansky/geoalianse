@@ -64,4 +64,33 @@ ul
   display: none!important
 // ======= END TEMPLATE STYLES =======
 
+.section-title
+  font-size: 50px
+  font-weight: 900
+  text-transform: uppercase
+  position: relative
+  padding-left: 46px
+  line-height: 1
+  margin-bottom: 0
+  color: #284200
+  &:before
+    content: ''
+    position: absolute
+    width: 8px
+    height: 8px
+    +gradient
+    top: 10px
+    left: 30px
+  &:after
+    content: ''
+    position: absolute
+    width: 2px
+    height: calc(100% - 18px)
+    left: 32.5px
+    bottom: 0
+    background-color: #fff
+
+
+
+
 
