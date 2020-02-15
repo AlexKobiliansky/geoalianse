@@ -1,0 +1,60 @@
+.s-video
+  background-image: url('../img/bg-video.jpg')
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    opacity: .75
+    background-color: #000
+
+
+.video-item
+  height: 655px
+  width: 100%
+  background-color: #374a52
+
+.video-player
+  height: 655px
+  position: relative
+
+.thumbnail-container
+  +bg-cover
+  position: relative
+  &:after
+    position: absolute
+    content: ''
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    +mt(.3s)
+    background-color: rgba(#000, .4)
+    opacity: 1
+    z-index: 1
+
+.btn-play
+  width: 86px
+  height: 60px
+  background-color: #fc0d1c
+  display: inline-block
+  border-radius: 20px
+  position: absolute
+  top: calc(50% - 30px)
+  left: calc(50% - 43px)
+  z-index: 2
+  +mt(.3s)
+  cursor: pointer
+  &:after
+    content: ''
+    position: absolute
+    border: 13px solid transparent
+    border-left: 23px solid #fff
+    left: 34px
+    top: 18px
+    +mt(.3s)
+  &:hover
+    background-color: darken(#fc0d1c, 15%)
