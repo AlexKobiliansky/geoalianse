@@ -6,6 +6,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .map
+    height: 400px
+
   .video-player, .video-item
     height: 530px
 
@@ -84,6 +87,33 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .contacts-wrap
+    flex-direction: column
+    &.top
+      flex-direction: column-reverse
+      margin-bottom: 30px
+      .right-part
+        margin-bottom: 30px
+    &.bottom
+      .con-item
+        margin-bottom: 20px
+      .left-part
+        margin-bottom: 40px
+
+  .contact-part.left-part .con-item
+    margin-left: 0
+
+  .contacts-wrap.middle
+    display: none
+
+  .s-contacts
+    .section-title
+      margin-bottom: 30px
+
+
+  .contact-part
+    width: 100%
 
   .video-player, .video-item
     height: 400px
@@ -197,6 +227,8 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .map
+    height: 300px
   .s-faq
     padding-top: 50px
 

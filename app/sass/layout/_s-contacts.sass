@@ -1,0 +1,63 @@
+.s-contacts
+  background-color: #fff
+  padding-top: 55px
+  font-weight: 300
+
+.con-item
+  .svg
+    height: 26px
+    width: auto
+    margin-right: 20px
+    position: relative
+    top: 5px
+  &.mail
+    .svg
+      height: 22px
+
+.contacts-wrap
+  display: flex
+  justify-content: space-between
+  &.top
+    .right-part
+      font-size: 14px
+      color: #848484
+      line-height: 1.7
+      padding-right: 30px
+    .con-item
+      margin-bottom: 18px
+      &.mail
+        margin-bottom: 0
+  &.middle
+    .contact-part
+      padding: 40px 0
+
+.contact-part
+  width: calc(50% - 10px)
+  .section-title
+    margin-bottom: 35px
+    padding-left: 30px
+    &:before
+      left: 17px
+    &:after
+      display: none
+  a
+    color: #000
+    &:hover
+      color: $accent-green
+  &.left-part
+    .con-item
+      margin-left: 30px
+
+
+.map
+  height: 560px
+  width: 100%
+  position: relative
+
+#left-map
+  +gradient
+
+#right-map
+  background-color: $accent-red
+
+
