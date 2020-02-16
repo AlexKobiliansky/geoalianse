@@ -179,6 +179,13 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .footer-wrap
+    flex-wrap: wrap
+
+  .foot-item
+    width: 50%
+    margin-bottom: 30px
+
   .body-form
     padding-bottom: 100px
     padding-top: 50px
@@ -226,6 +233,18 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .foot-logo
+    padding: 0 15px
+
+  .foot-item
+    width: 100%
+    padding-left: 0
+    text-align: center
+
+  .socials
+    text-align: center
+    margin-top: 30px
 
   .map
     height: 300px
@@ -342,6 +361,12 @@
       width: 100%
 
 @media(max-width: 390px)
+
+  .popup-form
+    padding: 40px 20px
+    &.thanks
+      padding: 60px 20px
+
   .section-title
     padding-left: 0
     font-size: 28px

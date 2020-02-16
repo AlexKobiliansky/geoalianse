@@ -109,6 +109,91 @@ ul
   &:hover, &:focus, &:active
     background-color: darken($accent-red, 5%)
 
+//preloader
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 999
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #fbfbfb
+
+.sk-chasing-dots
+  width: 4em
+  height: 4em
+  position: relative
+  margin: auto
+  text-align: center
+  animation: sk-chasing-dots-rotate 2s infinite linear
+
+.sk-chasing-dots .sk-child
+  width: 2em
+  height: 2em
+  display: inline-block
+  position: absolute
+  top: 0
+  background-color: $accent-green
+  border-radius: 100%
+  animation: sk-chasing-dots-bounce 2s infinite ease-in-out
+
+.sk-chasing-dots .sk-dot-2
+  top: auto
+  bottom: 0
+  animation-delay: -1s
+
+
+@-webkit-keyframes sk-chasing-dots-rotate
+  100%
+    transform: rotate(360deg)
+
+@keyframes sk-chasing-dots-rotate
+  100%
+    transform: rotate(360deg)
+
+
+@-webkit-keyframes sk-chasing-dots-bounce
+  0%, 100%
+    transform: scale(0)
+
+  50%
+    transform: scale(1)
+
+
+@keyframes sk-chasing-dots-bounce
+  0%, 100%
+    transform: scale(0)
+
+  50%
+    transform: scale(1)
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form, .video-popup, .popup-privacy, .popup-kwiz
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form, &.mfp-ready .video-popup, &.mfp-ready .popup-privacy, &.mfp-ready .popup-kwiz
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form, &.mfp-removing .video-popup, &.mfp-removing .popup-privacy, &.mfp-removing .popup-kwiz
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
 
 
 

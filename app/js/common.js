@@ -103,6 +103,7 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.preloader').fadeOut();
 
 
 
@@ -201,6 +202,17 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
+    $("a[href='#popup-form']").magnificPopup({
+        type: "inline",
+        fixedContentPos: !1,
+        fixedBgPos: !0,
+        overflowY: "auto",
+        closeBtnInside: !0,
+        preloader: !1,
+        midClick: !0,
+        removalDelay: 300,
+        mainClass: "my-mfp-zoom-in",
+    });
 
 
     //E-mail Ajax Send
@@ -301,9 +313,13 @@ $(document).ready(function(){
                 initMaps();
             });
         }
-
-
     }, 2000);
+
+    /** MAPS END */
+
+    $('#totop').click(function() {
+        $('body,html').animate({scrollTop:0},600);
+    });
 
 
 
