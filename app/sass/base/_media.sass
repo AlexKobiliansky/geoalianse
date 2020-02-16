@@ -6,6 +6,24 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .useful-wrap
+    position: relative
+    .service-item
+      &:before
+        display: none
+    .service-item.empty
+      display: none
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-color: #fff
+      opacity: .85
+
+
   .map
     height: 400px
 
@@ -224,7 +242,9 @@
       border-left: 1px solid #e5e5e5
 
 
-  .section-title
+
+
+  .section-title, .page-title
     font-size: 36px
     &:before
       top: 6px
@@ -325,7 +345,7 @@
       .service-item-content
         border-right: none
 
-  .section-title
+  .section-title, .page-title
     font-size: 32px
     &:before
       top: 7px

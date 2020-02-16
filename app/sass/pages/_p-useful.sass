@@ -1,0 +1,20 @@
+.page-useful
+  padding-bottom: 90px
+
+.useful-wrap
+  margin-bottom: 0!important
+  background-image: url('../img/bg-useful.jpg')
+  +bg-cover
+  .service-item
+    &-content
+      justify-content: center
+      padding: 16px 24px
+    &-title
+      padding-right: 0
+    &.empty
+      background-image: url('../img/bg-useful-item.jpg')
+      pointer-events: none
+      background-repeat: no-repeat
+      background-position: left top
+      &:before
+        display: none
