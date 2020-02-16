@@ -218,13 +218,61 @@ $(document).ready(function(){
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        th.find('.btn').prop('disabled','disabled');
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
+            if(th.hasClass('review-form')) {
+                $.magnificPopup.open({
+                    items: {
+                        src: '#review-thanks'
+                    },
+                    type: 'inline',
 
+                    fixedContentPos: false,
+                    fixedBgPos: true,
+
+                    overflowY: 'auto',
+
+                    closeBtnInside: true,
+                    preloader: false,
+
+                    midClick: true,
+                    removalDelay: 300,
+                    mainClass: 'my-mfp-zoom-request'
+                }, 0);
+            } else {
+                $.magnificPopup.open({
+                    items: {
+                        src: '#popup-thanks'
+                    },
+                    type: 'inline',
+
+                    fixedContentPos: false,
+                    fixedBgPos: true,
+
+                    overflowY: 'auto',
+
+                    closeBtnInside: true,
+                    preloader: false,
+
+                    midClick: true,
+                    removalDelay: 300,
+                    mainClass: 'my-mfp-zoom-request'
+                }, 0);
+            }
+
+
+
+            setTimeout(function(){
+                $.magnificPopup.close();
+            }, 3000);
+
+            th.find(".btn").removeAttr('disabled');
+            th.trigger("reset");
         });
         return false;
     });
