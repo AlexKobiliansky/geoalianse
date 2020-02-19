@@ -10,7 +10,7 @@ form
     span
       display: block
       margin-bottom: 10px
-  input
+  input, textarea
     line-height: 1
     background-color: #fff
     border: 1px solid #fff
@@ -65,3 +65,29 @@ form
   margin: 1px 0 0 0px
   border-bottom: 2px solid $accent-green
   border-left: 2px solid $accent-green
+
+.review-form
+  background-color: #fff
+  padding: 35px 0 45px
+  box-shadow: 0 20px 40px rgba(#000, .2)
+  position: relative
+  z-index: 3
+  h3
+    font-size: 30px
+    color: #284200
+    margin-bottom: 35px
+  input, textarea
+    padding: 10px 20px
+    border: 1px solid #7f8183
+  input
+    width: 270px
+  textarea
+    height: 110px
+    margin-bottom: 20px
+    resize: none
+  &-bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    label
+      margin-bottom: 0

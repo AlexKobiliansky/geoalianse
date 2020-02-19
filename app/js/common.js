@@ -45,6 +45,14 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
+    var element = document.querySelector( '.main-mnu' );
+
+    var droppy = new Droppy( element, {
+        parentSelector: 'li',
+        dropdownSelector: 'li > ul',
+        triggerSelector: 'a'
+    } );
+
 
     $('.intro-slider').owlCarousel({
         loop:true,
